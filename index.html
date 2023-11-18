@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .e-con-inner {
+  position: relative;
+  width: 4rem; /* Set the desired container width */
+  height: 2rem; /* Set the desired container height */
+  overflow: hidden;
+  transition: all 0.3s; /* Smooth transition for the hover effect */
+}
+
+.e-con-inner .eicon-chevron-left,
+.e-con-inner .eicon-chevron-right {
+  background-color: rgba(184, 184, 184, 0.1);
+  border: .1rem solid transparent;
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s; /* Smooth transition for the hover effect */
+  z-index: 1;
+  transform: translateX(-50%); /* Initially, move them offscreen to the left and right */
+}
+
+.e-con-inner .eicon-chevron-left {
+  left: 0;
+  z-index: 2;
+}
+
+.e-con-inner .eicon-chevron-right {
+  right: 0;
+  z-index: 2;
+}
+
+.e-con-inner:hover .eicon-chevron-left {
+  border: .1rem solid orange;
+  transform: translateX(0); /* Slide in from the left on hover */
+  cursor: pointer;
+}
+
+.e-con-inner:hover .eicon-chevron-right {
+  border: .1rem solid orange;
+  transform: translateX(0); /* Slide in from the right on hover */
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+    h
+  <div style="width: 500px; background-color: aqua; height: 700px;">
+    <div class="e-con-inner">
+        <div class="chevron-container left">
+          <div class="eicon-chevron-left"></div>
+        </div>
+        <div class="chevron-container right">
+          <div class="eicon-chevron-right"></div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
